@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="PocoLoco" /> 
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://greentfrapp.github.io/pocoloco" />
+  <meta property="og:description" content="PocoLoco demo." />
+  <title>PocoLoco</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="./main.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css"> -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans&display=swap" rel="stylesheet">   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <section class="section main">
+      <svg class="background-blob" id="demo" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path id="path1" fill="#2300FF"></path>
+        <path id="path2" fill="#2300FF"></path>
+      </svg>
+      <b-navbar style="background: none;">
+          <template #brand>
+              <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                  <h1 class="logo">tinymodels.io</h1>
+              </b-navbar-item>
+          </template>
+          <template #start>
+              
+          </template>
+
+          <template #end>
+            <b-navbar-item href="#" class="has-text-weight-semibold">
+              Models
+            </b-navbar-item>
+            <b-navbar-item href="#" class="has-text-weight-semibold">
+              Developers
+            </b-navbar-item>
+            <b-navbar-item tag="div">
+              <div class="buttons">
+                <a class="button is-primary has-text-weight-semibold">
+                  Sign up
+                </a>
+                <a class="button is-light has-text-weight-semibold">
+                  Log in
+                </a>
+              </div>
+            </b-navbar-item>
+          </template>
+      </b-navbar>
+      <section class="section columns is-vcentered">
+        <div class="container">
+          <div class="column">
+            <div class="columns">
+              <div class="column is-6 is-two-thirds-tablet">
+                <p class="title is-0 is-size-1-mobile">
+                  Making AI available for the world
+                </p>
+              </div>
+            </div>
+            <div class="columns is-size-5 is-size-6-mobile">
+              <div class="column is-7">
+                <p class="block">
+                  <span class="has-text-weight-bold">Need some AI?</span>
+                  Call any model via an API.
+                <!-- </p> -->
+              <!-- </div> -->
+              <!-- <div class="column is-3"> -->
+                <!-- <p class="block"> -->
+                  <br/>
+                  <span class="has-text-weight-bold">Developed a model?</span>
+                  Drag, drop and deploy.
+                </p>
+              </div>
+            </div>
+            <p class="block is-size-5 has-text-weight-bold">
+              It's that simple.
+            </p>
+            <b-button rounded class="cta prussian-bg has-text-weight-bold" icon-right="play">Try a model</b-button>
+          </div>
+        </div>
+      </section>
+      <section class="section lime-bg">
+        <div class="container columns is-vcentered">
+          <div class="column is-5 is-size-5">
+            <h5 class="small-title">
+              Simplest deployment ever
+            </h5>
+            <h5 class="title is-2">
+              Upload your model.
+              <br/>
+              Test your API.
+            </h5>
+            <p class="block">
+              Deploying a model should never take longer than uploading it.
+            </p>
+            <!-- <p class="block"> -->
+              <!-- <span class="has-text-weight-bold">tinymodels.io</span> is the fastest way to deploy a model. -->
+            <!-- </p> -->
+            <b-button rounded class="has-text-weight-bold" icon-right="play">Deploy now</b-button>
+          </div>
+          <div class="column is-7 is-size-5">
+            <!-- Image here -->
+            <div id="easy-article" class="card">
+              <div class="card-content">
+                <div class="content">
+                  <h1 class="title is-4 is-size-5-mobile">
+                    10 easy ways to deploy your model with a Flask app via Nginx using Gunicorn in a Docker image hosted on AWS EC2
+                  </h1>
+                  <p class="is-size-6">
+                    <span style="color: green;">MLPro92</span>&nbsp;&nbsp;&nbsp;Jun 9 · 42 min read
+                  </p>
+                  <p class="is-size-6">
+                    After you train your model, you want people to use it. This tutorial will show you 10 ways to deploy your model with Flask behind Nginx and Gunicorn, using Docker running on an EC2 instance. Not sure which EC2 instance to use? Click <span style="color: green;">here</span> for 5 ways to pick the best EC2 instance for your use case!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <figure id="aint-nobody" class="image">
+              <img src="static/aint-nobody.png" alt="Placeholder image">
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            Supports all major frameworks
+          </h1>
+          <div class="level">
+            <img class="level-item is-narrow" src="static/pytorch-logo.png" />
+            <img class="level-item is-narrow" src="static/tensorflow-logo.png" />
+            <img class="level-item is-narrow" src="static/onnx-logo.png" />
+            <img class="level-item is-narrow" src="static/sklearn-logo.png" />
+          </div>
+        </div>
+      </section>
+      <section class="section prussian-bg">
+        <div class="container columns is-vcentered is-centered">
+          <div class="column is-narrow">
+            <!-- Image here -->
+            <figure id="you-get-a" class="image">
+              <img src="static/you-get-a-model.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="column is-5 is-size-5">
+            <h5 class="small-title">
+              Don't have a model? Get one here
+            </h5>
+            <h5 class="title is-2">
+              Try out any model with just an API call.
+            </h5>
+            <p class="block">
+              Don’t reinvent the wheel. <br/> Don’t retrain that model.
+            </p>
+            <b-button rounded class="white-bg has-text-weight-bold" icon-right="play">Try a model</b-button>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container columns is-centered">
+          <div class="column has-text-centered">
+            <h5 class="small-title">
+              Models as a service
+            </h5>
+            <h5 class="title is-2">
+              Developed a great model?
+              <br/>
+              Get paid for it!
+            </h5>
+            <p class="block is-size-5">
+              It’s like OnlyFans, but for models.
+              <br/>
+              No, AI models. No, not deepfakes. Like AI code.
+              <br/>
+              Yes, it’s safe for work.
+            </p>
+            <b-button rounded class="cta prussian-bg has-text-weight-bold" icon-right="play">Just sign up already</b-button>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <nav class="level">
+          <!-- Left side -->
+          <div class="level-left">
+            <div class="level-item">
+              <h1 class="logo">tinymodels.io</h1>
+            </div>
+          </div>
+          <!-- Right side -->
+          <div class="level-right">
+            <p class="level-item is-size-6 has-text-weight-semibold mx-5"><a>Models</a></p>
+            <p class="level-item is-size-6 has-text-weight-semibold mx-5"><a>Developers</a></p>
+            <p class="level-item is-size-6 has-text-weight-semibold mx-5"><a>Sign up</a></p>
+            <p class="level-item is-size-6 has-text-weight-semibold mx-5"><a>Log in</a></p>
+          </div>
+        </nav>
+      </footer>
+    </section>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+  <script>
+      new Vue({
+          el: '#app',
+          mounted () {
+            const path1 = d3.select('#path1')
+            const path2 = d3.select('#path2')
+            repeat(path1, 'M0 0L100 0L100 0L0 60Z', 'M0 0L100 0L100 30L0 100Z', 28000)
+            repeat(path2, 'M0 0L100 0L100 20L0 90Z', 'M0 0L100 0L100 90L0 0Z', 15000)
+            function repeat (path, d1, d2, duration) {
+              path.attr('d', d2)
+                .transition()
+                .attr('d', d1)
+                .duration(duration)
+                .transition()
+                .attr('d', d2)
+                .duration(duration)
+                .on('end', () => repeat(path, d1, d2, duration))
+            }
+          }
+      })
+  </script>
+</body>
+</html>
